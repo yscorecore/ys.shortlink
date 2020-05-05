@@ -34,6 +34,16 @@ services:
       Redis__ConnectionString: redis:6379
       ConnectionStrings__SequenceContext: Server=mysql;Port=3306;Database=SequenceContext; User=root;Password=my-secret-pw;
     entrypoint: sh -c "/scripts/wait-for-it.sh mysql:3306 -- dotnet YS.ShortLink.App.dll Knife:Stage=install && dotnet YS.ShortLink.App.dll"
+  web:
+    depends_on: 
+      - api
+    build: 
+      context: "./"
+      dockerfile: src/YS.ShortLink.Web/Dockerfile
+    networks:
+      - front
+    ports:
+      - "${WEB_PORT:-88}:88"    
 networks:
   front:
   back:
