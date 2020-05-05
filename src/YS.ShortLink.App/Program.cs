@@ -1,4 +1,5 @@
 ﻿using YS.Knife.Hosting;
+using YS.Sequence.Impl.EFCore.MySql;
 
 namespace YS.ShortLink.App
 {

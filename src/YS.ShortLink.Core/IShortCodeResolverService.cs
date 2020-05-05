@@ -6,6 +6,6 @@ using System.Threading.Tasks;
 namespace YS.ShortLink
 {
     public interface IShortCodeResolverService { 
-        Task<string> ResolveShort(string shortCode);
+        Task<(bool Exists, string Url)> ResolveShort(string shortCode);
     }
 }

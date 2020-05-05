@@ -14,8 +14,8 @@ namespace YS.ShortLink.Rest.Api
         [HttpGet("/{shortCode}")]
         public async Task<ActionResult> ResolveShort(string shortCode)
         {
-            var url = await this.Delegater.ResolveShort(shortCode);
-            return new RedirectResult("http://www.baidu.com", true, true);
+            var data = await this.Delegater.ResolveShort(shortCode);
+            return new RedirectResult(data.Url, data.Exists, true);
         }
     }
 }
