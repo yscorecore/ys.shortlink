@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>短链接生成</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+    <main>
+        <header>
+            <h1>短链接生成器</h1>
+        </header>
+        <form class="form">
+            <input name="url" type="text"><button type="submit">转换</button>
+        </form>
+        <div class="result" style="display: none;">
+            <p>
+                <label>短网址：</label><span class="link short-link"></span>
+            </p>
+            <p>
+                <label>原网址：</label><span class="link original-link"></span>
+            </p>
+            
+        </div>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+</html>

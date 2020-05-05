@@ -7,7 +7,10 @@ namespace YS.ShortLink.App
     {
         public static void Main(string[] args)
         {
-            KnifeWebHost.Start(args);
+            using (var host = new KnifeWebHost<Startup>(args))
+            {
+                host.Run();
+            }
         }
     }
 }

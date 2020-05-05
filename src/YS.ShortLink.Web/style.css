@@ -1,0 +1,31 @@
+main {
+
+    width: 600px;
+    margin: 100px auto;
+    text-align: center;
+}
+form input{
+    width: 80%;
+    font-size: 1.2em;
+    line-height: 1.2em;
+}
+form button{
+    font-size: 1.2em;
+    line-height: 1.2em;
+}
+.result {
+    background-color: #f1f9ff;
+    margin-top: 20px;
+    padding: 10px 0px 10px 20px;
+}
+.result p{
+    text-align: left;
+    font-size: 1.2em;
+}
+.result p label{
+    padding-right:20px;
+    color: #56688a;
+}
+.result p span{
+    color: #0474c8;
+}
