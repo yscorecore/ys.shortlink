@@ -38,8 +38,7 @@ services:
     depends_on: 
       - api
     build: 
-      context: "./"
-      dockerfile: src/YS.ShortLink.Web/Dockerfile
+      context: "./src/YS.ShortLink.Web"
     networks:
       - front
     ports:
